@@ -1,0 +1,5 @@
+WARNING:2225:Trailing comma (not supported by all browsers)
+WARNING:2399:TypeError\d redeclaration of var String.
+WARNING:2399:Code has no side effects
+WARNING:2573:TypeError\d redeclaration of var String.
+WARNING:2573:Code has no side effects

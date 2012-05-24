@@ -1,0 +1,177 @@
+
+
+Jindent - Source Code Formatter for Java/C/C++
+
+
+--- LICENSE AGREEMENT ---
+
+
+(c) 1997-2011 by Newforms - Software Development, Germany. All Rights Reserved.
+
+
+
+
+
+DEFINITIONS: In this License, unless the context is otherwise required, the following expressions will have the following meanings.
+
+The term "Software" means the Jindent program package that was delivered with this license agreement. Depending on the license you have obtained this can be the "Jindent" program package, the restricted "Jindent Trial" program package, the "30-Days Evaluation" or the "Beta-Testing" program package.
+
+PLEASE READ THIS DOCUMENT CAREFULLY BEFORE USING THE LICENSED SOFTWARE. BY USING THE LICENSED SOFTWARE, YOU ARE AGREEING TO BE BOUND BY THE TERMS OF THIS LICENSE. IF YOU DO NOT AGREE TO THE TERMS OF THIS LICENSE, YOU ARE NOT PERMITTED TO USE THE LICENSED SOFTWARE; IF YOU HAVE ALREADY PURCHASED THE LICENSED SOFTWARE, PROMPTLY RETURN THE LICENSED SOFTWARE TO THE PLACE WHERE YOU OBTAINED THEM AND YOUR MONEY WILL BE REFUNDED.
+
+IF YOU HAVE PREVIOUSLY NEGOTIATED AND EXECUTED A LICENSE FOR THE LICENSED SOFTWARE, OR A PRIOR VERSION OF THE LICENSED SOFTWARE WHICH LICENSE BY ITS TERMS SPECIFICALLY COVERS YOUR USE OF UPDATES TO THE LICENSED SOFTWARE, THE TERMS OF THAT EXECUTED LICENSE WILL CONTINUE TO CONTROL YOUR USE OF THE LICENSED SOFTWARE.
+
+
+
+--- COMMERCIAL SINGLE USER LICENSE ---
+
+
+This license applies to the commercial single user license of the software. 
+
+By using or installing the software, you agree to all of the terms of this license agreement. If you do not agree to any of the terms of this license, then do not use, or install the software.
+
+The software may be used under this license by a single person who uses the software personally on one or more computers. This is not a concurrent use license.
+
+The software may be accessed through a network, provided that you have obtained a single user license for each individual user who will access the software through the network. For instance, if 8 different users will access the software through the network, each user must have his own single user license, regardless of whether all users use the software at different times or concurrently.
+
+You may not distribute this software to a third party. You may not attempt to rent, lease, decompile, disassemble, or reverse engineer this software.
+
+You may not make the software available to others in connection with a service bureau, application service provider, or similar business, or use the software in a business to provide source code transformation or beautification services to others.
+
+
+
+--- NON-COMMERCIAL SINGLE USER LICENSE ---
+
+
+This license applies to the non-commercial single user license of the software.
+
+By using or installing the software, you agree to all of the terms of this license agreement. If you do not agree to any of the terms of this license, then do not use, or install the software.
+
+The software may be used under this license by a single person for non-commercial purpose only. We define non-commercial purposes as non-profit educational purpose, free software development and purposes that are not indended to be commercially exploited.
+
+The software may be used under this license by a single person who uses the software personally on one or more computers. This is not a concurrent use license.
+
+The software may be accessed through a network, provided that you have obtained a single user license for each individual user who will access the software through the network. For instance, if 8 different users will access the software through the network, each user must have his own single user license, regardless of whether all users use the software at different times or concurrently.
+
+You may not distribute this software to a third party. You may not attempt to rent, lease, decompile, disassemble, or reverse engineer this software.
+
+You may not make the software available to others in connection with a service bureau, application service provider, or similar business, or use the software in a business to provide source code transformation or beautification services to others.
+
+
+
+--- COMMERCIAL SITE LICENSE for X users ---
+
+
+This license applies to the commercial site license of the software. 
+
+By using or installing the software, you agree to all of the terms of this license agreement. If you do not agree to any of the terms of this license, then do not use, or install the software.
+
+The software may be used under this license by a maximal number of X persons who use the software personally on one or more computers and who are members or employees of the institution or the company the license is registered to. The software may be used under this license within a single site which means a single company or organization. There is no limitation to the location of the company.
+
+The software may be accessed through a network, provided that you have obtained a site license which covers the number of individual users who will access the software through the network. For instance, if 100 different users will access the software through the network, the company must have a site license which covers the usage of 100 users, regardless of whether all users use the software at different times or concurrently.
+
+One user from your company or organization should be identified as the licensee and primary support contact.
+
+You may not distribute this software to a third party. You may not attempt to rent, lease, decompile, disassemble, or reverse engineer this software.
+
+You may not make the software available to others in connection with a service bureau, application service provider, or similar business, or use the software in a business to provide source code transformation or beautification services to others.
+
+
+
+--- NON-COMMERCIAL SITE LICENSE for X users ---
+
+
+This license applies to the non-commercial single user license of the software.
+
+By using or installing the software, you agree to all of the terms of this license agreement. If you do not agree to any of the terms of this license, then do not use, or install the software.
+
+The software may be used under this license for non-commercial purpose only. We define non-commercial purposes as non-profit educational purpose, free software development and purposes that are not indended to be commercially exploited.
+
+The software may be used under this license by a maximal number of X persons who use the software personally on one or more computers and who are members or employees of the institution or the company the license is registered to. The software may be used under this license within a single site which means a single company or organization. There is no limitation to the location of the company.
+
+The software may be accessed through a network, provided that you have obtained a site license which covers the number of individual users who will access the software through the network. For instance, if 100 different users will access the software through the network, the company must have a site license which covers the usage of 100 users, regardless of whether all users use the software at different times or concurrently.
+
+One user from your company or organization should be identified as the licensee and primary support contact.
+
+You may not distribute this software to a third party. You may not attempt to rent, lease, decompile, disassemble, or reversengineer this software.
+
+You may not make the software available to others in connection with a service bureau, application service provider, or similar business, or use the software in a business to provide source code transformation or beautification services to others.
+
+
+
+--- COMMERCIAL ENTERPRISE LICENSE ---
+
+
+This license applies to the commercial enterprise license of the software.
+
+By using or installing the software, you agree to all of the terms of this license agreement. If you do not agree to any of the terms of this license, then do not use, or install the software.
+
+The software may be used under this license by an unlimited number of persons who use the software personally on one or more computers and who are members or employees of the institution or the company the license is registered to. The software may be used under this license within a single site which means a single company or organization. There is no limitation to the location of the company.
+
+One user from your company or organization should be identified as the licensee and primary support contact.
+
+You may not distribute this software to a third party. You may not attempt to rent, lease, decompile, disassemble, or reverse engineer this software.
+
+You may not make the software available to others in connection with a service bureau, application service provider, or similar business, or use the software in a business to provide source code transformation or beautification services to others.
+
+
+
+--- RESTRICTED TRIAL LICENSE ---
+
+
+This license applies to the restricted trial license of the software.
+
+By using or installing the software, you agree to all of the terms of this license agreement. If you do not agree to any of the terms of this license, then do not use, or install the software.
+
+The software may be used under this license by a single person who uses the software personally on one or more computers. This is not a concurrent use license.
+
+Permission is granted to use the restricted trial software for evaluation purpose. You may not distribute it to a third party. You may not attempt to rent, lease, decompile, disassemble, or reverse engineer the software. You may not use the software after receiving a notice from "Newforms - Software Development" terminating your program evaluation.
+
+You may not distribute this software to a third party. You may not attempt to rent, lease, decompile, disassemble, or reverse engineer this software.
+
+You may not make the software available to others in connection with a service bureau, application service provider, or similar business, or use the software in a business to provide source code transformation or beautification services to others.
+
+
+
+--- 30-DAYS EVALUATION LICENSE ---
+
+
+This license applies to the 30-days evaluation license of the software.
+
+By using or installing the software, you agree to all of the terms of this license agreement. If you do not agree to any of the terms of this license, then do not use, or install the software.
+
+The software may be used under this license by a single person who uses the software personally on one or more computers. This is not a concurrent use license.
+
+Permission is granted to use the software for evaluation purpose for 30 days. You may not distribute it to a third party. You may not attempt to rent, lease, decompile, disassemble, or reverse engineer the software. You may not use the software after receiving a notice from "Newforms - Software Development" terminating your program evaluation.
+
+You must delete the software and all of its copies after 30 days from first installation.
+
+You may not distribute this software to a third party. You may not attempt to rent, lease, decompile, disassemble, or reverse engineer this software.
+
+You may not make the software available to others in connection with a service bureau, application service provider, or similar business, or use the software in a business to provide source code transformation or beautification services to others.
+
+
+
+--- BETA TESTING LICENSE ---
+
+
+This license applies to the beta-testing license of the software.
+
+THE BETA SOFTWARE LICENSED HEREUNDER IS BELIEVED TO CONTAIN DEFECTS AND A PRIMARY PURPOSE OF THIS BETA TESTING LICENSE IS TO OBTAIN FEEDBACK ON SOFTWARE PERFORMANCE AND THE IDENTIFICATION OF DEFECTS. LICENSEE IS ADVISED TO SAFEGUARD IMPORTANT DATA, TO USE CAUTION AND NOT TO RELY IN ANY WAY ON THE CORRECT FUNCTIONING OR PERFORMANCE OF THE SOFTWARE AND/OR ACCOMPANYING MATERIALS.
+
+You may not distribute it to a third party. You may not attempt to rent, lease, decompile, disassemble, or reverse engineer the software. 
+
+You may not make the software available to others in connection with a service bureau, application service provider, or similar business, or use the software in a business to provide source code transformation or beautification services to others.
+
+
+
+
+The following applies to all license types.
+
+
+
+--- NO WARRANTY ---
+
+
+THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.
+
+IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING WILL ANY COPYRIGHT HOLDER, BE LIABLE TO YOU OR OTHERS FOR DAMAGES, OF ANY KIND OR AMOUNT, INCLUDING, WITHOUT LIMITATION, ANY GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE INSTALLATION, USE OR INABILITY TO USE THE PROGRAM (THE AFORESAID FREEDOM OF LIABILITY SHALL APPLY TO ANY ADVERSE CONSEQUENCE, INCLUDING BUT NOT LIMITED TO, LOSS OF DATA, DATA BEING RENDERED INACCURATE, LOSSES SUSTAINED BY YOU, THIRD PARTIES OR A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS), WHETHER OR NOT SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF ANY SUCH DAMAGES.

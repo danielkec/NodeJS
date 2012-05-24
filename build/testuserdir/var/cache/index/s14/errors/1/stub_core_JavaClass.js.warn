@@ -1,0 +1,2 @@
+WARNING:104:TypeError\d redeclaration of var JavaClass.
+WARNING:104:Code has no side effects

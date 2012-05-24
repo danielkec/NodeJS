@@ -1,0 +1,3 @@
+WARNING:727:Trailing comma (not supported by all browsers)
+WARNING:796:TypeError\d redeclaration of var Function.
+WARNING:796:Code has no side effects

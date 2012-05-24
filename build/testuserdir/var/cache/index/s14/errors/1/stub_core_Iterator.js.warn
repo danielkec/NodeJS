@@ -1,0 +1,5 @@
+WARNING:8:Trailing comma (not supported by all browsers)
+WARNING:9:TypeError\d redeclaration of var Iterator.
+WARNING:9:Code has no side effects
+WARNING:10:TypeError\d redeclaration of var Iterator.
+WARNING:10:Code has no side effects

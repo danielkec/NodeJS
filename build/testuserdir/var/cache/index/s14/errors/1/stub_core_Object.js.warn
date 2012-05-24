@@ -1,0 +1,3 @@
+WARNING:753:Trailing comma (not supported by all browsers)
+WARNING:790:TypeError\d redeclaration of var Object.
+WARNING:790:Code has no side effects

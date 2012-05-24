@@ -1,0 +1,2 @@
+WARNING:72:TypeError\d redeclaration of var Infinity.
+WARNING:72:Code has no side effects

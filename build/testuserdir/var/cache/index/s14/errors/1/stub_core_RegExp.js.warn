@@ -1,0 +1,5 @@
+WARNING:1051:Trailing comma (not supported by all browsers)
+WARNING:1461:TypeError\d redeclaration of var RegExp.
+WARNING:1461:Code has no side effects
+WARNING:1871:TypeError\d redeclaration of var RegExp.
+WARNING:1871:Code has no side effects

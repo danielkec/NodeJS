@@ -1,0 +1,3 @@
+WARNING:248:Trailing comma (not supported by all browsers)
+WARNING:409:TypeError\d redeclaration of var XMLHttpRequest.
+WARNING:409:Code has no side effects
