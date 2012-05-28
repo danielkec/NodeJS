@@ -57,16 +57,6 @@ private EditorCookie ec;
     }
 
     	private void selectError(String text, JTextComponent target) {
-		//Pattern p = Pattern.compile("((\r)|(\n)|(\r\n)|(\n\r))");
-//		Pattern p = Pattern.compile("(\r)");
-//		Matcher m = p.matcher(text);
-//		m.find();
-//		System.out.println("Group count "+m.groupCount());
-//		for (int i = 0; i < m.groupCount() - 1; i++) {
-//
-//				System.out.println("Match" + i + " >" + m.start(i));
-//
-//		}
 
 		Scanner scanner = new Scanner(text);
 		int lineCount = 0;

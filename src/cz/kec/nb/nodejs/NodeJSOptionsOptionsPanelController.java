@@ -46,7 +46,7 @@ public final class NodeJSOptionsOptionsPanelController extends OptionsPanelContr
     }
 
     public HelpCtx getHelpCtx() {
-        return null; // new HelpCtx("...ID") if you have a help set
+        return null; // new HelpCtx("...ID") if you have a help set// no help set
     }
 
     public JComponent getComponent(Lookup masterLookup) {

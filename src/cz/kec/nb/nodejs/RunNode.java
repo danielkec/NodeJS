@@ -33,9 +33,14 @@ import org.openide.windows.IOColorLines;
 import org.openide.windows.IOProvider;
 import org.openide.windows.InputOutput;
 import org.openide.windows.OutputWriter;
-
+/**
+ * @author Daniel Kec,Andrew Skiba
+ */
 public final class RunNode extends CookieAction {
 
+    /**
+     * Load the win icon for the win settings bubble 
+     */
     public static Icon loadIcon(){
         return new ImageIcon(RunNode.class.getResource("images/win.png"));
     }
@@ -43,6 +48,9 @@ public final class RunNode extends CookieAction {
     private static final long serialVersionUID = -3853106497059314882L;
     private FileObject fo;
     private EditorCookie editorCookie;
+    /**
+     * Happen when Run Node.js is selected
+     */
     protected void performAction(Node[] activatedNodes) {
         try {
             DataObject dataObject = activatedNodes[0].getLookup().lookup(DataObject.class);
@@ -67,6 +75,7 @@ public final class RunNode extends CookieAction {
                 command = command.replaceAll("\\$\\{selectedfile\\}", fo.getNameExt());
                 command = command.replaceAll("\\$\\{workingdir\\}", Matcher.quoteReplacement(wdir));
                 if(command.contains(";")){
+                    // win settings bubble
                     NotificationDisplayer.getDefault().notify("NodeJS",loadIcon(), "Windows with Unix settings detected reseting cmd options. Please run again.", null);
                     NbPreferences.forModule(NodeJSOptionsPanel.class).put("COMMAND", "cd ${workingdir} && node ${selectedfile}");
                     return;
@@ -83,9 +92,7 @@ public final class RunNode extends CookieAction {
 
             final BufferedReader read = new BufferedReader(new InputStreamReader(proc.getInputStream()));
             final BufferedReader readerr = new BufferedReader(new InputStreamReader(proc.getErrorStream()));
-           // proc.waitFor();
             // thx to Andrew Skiba http://andskiba.blogspot.com/2011/09/nodejs-plugin-for-netbeans-and-daemons.html
-            // but maybe in future, threading in NB RPC
             final AtomicBoolean done = new AtomicBoolean(false);  
             new Thread(new Runnable() {  
                 public void run() {  
@@ -123,22 +130,16 @@ public final class RunNode extends CookieAction {
                 }  
             }).start();  
             
-//            while (read.ready()) {
-//                out.println(read.readLine());
-//            }
-//            while (readerr.ready()) {
-//                String line = readerr.readLine();
-//                printErrLine(line, io);
-//                //erout.println(readerr.readLine());
-//            }
-
-            
         } catch (Exception ex) {
             Exceptions.printStackTrace(ex);
         }
         
     }
 
+    /**
+     * Prints the err line with hyperlinks to the source files
+     * @throws IOException 
+     */
     private void printErrLine(String line, InputOutput io) throws IOException {
         String file = null;
         int lineNum = 0;
