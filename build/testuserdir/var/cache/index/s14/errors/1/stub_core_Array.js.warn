@@ -1,5 +1,0 @@
-WARNING:2131:Trailing comma (not supported by all browsers)
-WARNING:2397:TypeError\d redeclaration of var Array.
-WARNING:2397:Code has no side effects
-WARNING:2663:TypeError\d redeclaration of var Array.
-WARNING:2663:Code has no side effects

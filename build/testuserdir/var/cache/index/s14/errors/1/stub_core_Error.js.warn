@@ -1,5 +1,0 @@
-WARNING:240:Trailing comma (not supported by all browsers)
-WARNING:312:TypeError\d redeclaration of var Error.
-WARNING:312:Code has no side effects
-WARNING:384:TypeError\d redeclaration of var Error.
-WARNING:384:Code has no side effects

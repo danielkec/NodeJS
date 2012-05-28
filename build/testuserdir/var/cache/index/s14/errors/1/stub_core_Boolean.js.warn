@@ -1,5 +1,0 @@
-WARNING:366:Trailing comma (not supported by all browsers)
-WARNING:434:TypeError\d redeclaration of var Boolean.
-WARNING:434:Code has no side effects
-WARNING:502:TypeError\d redeclaration of var Boolean.
-WARNING:502:Code has no side effects

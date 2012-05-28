@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module codename="cz.kec.nb.nodejs">
-    <module_version install_time="1337864434133" last="true" origin="installer" specification_version="2.0">
+    <module_version install_time="1337868125969" last="true" origin="installer" specification_version="2.0">
         <file crc="4266848751" name="config/Modules/cz-kec-nb-nodejs.xml"/>
-        <file crc="399314437" name="modules/cz-kec-nb-nodejs.jar"/>
+        <file crc="1762205362" name="modules/cz-kec-nb-nodejs.jar"/>
     </module_version>
 </module>
