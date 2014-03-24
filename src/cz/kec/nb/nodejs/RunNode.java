@@ -40,6 +40,7 @@ public final class RunNode extends CookieAction {
 
     /**
      * Load the win icon for the win settings bubble 
+     * @return 
      */
     public static Icon loadIcon(){
         return new ImageIcon(RunNode.class.getResource("images/win.png"));
@@ -50,7 +51,9 @@ public final class RunNode extends CookieAction {
     private EditorCookie editorCookie;
     /**
      * Happen when Run Node.js is selected
+     * @param activatedNodes
      */
+    @Override
     protected void performAction(Node[] activatedNodes) {
         try {
             DataObject dataObject = activatedNodes[0].getLookup().lookup(DataObject.class);
@@ -58,8 +61,8 @@ public final class RunNode extends CookieAction {
             editorCookie.saveDocument();
             
             fo = dataObject.getPrimaryFile();
-            fo.getURL();
-            fo.getParent().getURL();
+            fo.toURL();
+            fo.getParent().toURL();
             final InputOutput io = IOProvider.getDefault().getIO("Node.js " + fo.getName(), false);
             final OutputWriter out = io.getOut();
             OutputWriter erout = io.getErr();
@@ -70,7 +73,7 @@ public final class RunNode extends CookieAction {
             // multi OS thing
             String[] cmd;
             if(System.getProperty("os.name").toLowerCase().contains("windows")){
-                String wdir = WinPath.winfixPath(fo.getParent().getURL().getPath());
+                String wdir = WinPath.winfixPath(fo.getParent().toURL().getPath());
                 System.out.println("Working dir "+wdir);
                 command = command.replaceAll("\\$\\{selectedfile\\}", fo.getNameExt());
                 command = command.replaceAll("\\$\\{workingdir\\}", Matcher.quoteReplacement(wdir));
@@ -83,7 +86,7 @@ public final class RunNode extends CookieAction {
                 cmd = new String[]{"cmd", "/c",command};
             }else{
                 command = command.replaceAll("\\$\\{selectedfile\\}", fo.getNameExt());
-                command = command.replaceAll("\\$\\{workingdir\\}", fo.getParent().getURL().getPath());
+                command = command.replaceAll("\\$\\{workingdir\\}", fo.getParent().toURL().getPath());
                 cmd = new String[]{"/bin/sh", "-c", command};
             }
             
