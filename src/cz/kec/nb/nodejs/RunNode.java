@@ -107,6 +107,7 @@ public final class RunNode extends CookieAction {
             // thx to Andrew Skiba http://andskiba.blogspot.com/2011/09/nodejs-plugin-for-netbeans-and-daemons.html
             final AtomicBoolean done = new AtomicBoolean(false);  
             new Thread(new Runnable() {  
+                @Override
                 public void run() {  
                     try {  
                         while (!done.get()) { 
@@ -130,6 +131,7 @@ public final class RunNode extends CookieAction {
                 }  
             }).start();  
             new Thread(new Runnable() {  
+                @Override
                 public void run() {  
                     try {  
                         proc.waitFor();  
@@ -171,14 +173,17 @@ public final class RunNode extends CookieAction {
         }
     }
 
+    @Override
     protected int mode() {
         return CookieAction.MODE_EXACTLY_ONE;
     }
 
+    @Override
     public String getName() {
         return NbBundle.getMessage(RunNode.class, "CTL_RunNode");
     }
 
+    @Override
     protected Class[] cookieClasses() {
         return new Class[]{DataObject.class};
     }
@@ -190,6 +195,7 @@ public final class RunNode extends CookieAction {
         putValue("noIconInMenu", Boolean.TRUE);
     }
 
+    @Override
     public HelpCtx getHelpCtx() {
         return HelpCtx.DEFAULT_HELP;
     }

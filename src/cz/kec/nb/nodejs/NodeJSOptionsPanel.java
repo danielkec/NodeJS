@@ -33,15 +33,18 @@ final class NodeJSOptionsPanel extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jEditorPane1 = new javax.swing.JEditorPane();
+        runCommandjEditorPane1 = new javax.swing.JEditorPane();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        killCommandjEditorPane2 = new javax.swing.JEditorPane();
 
         org.openide.awt.Mnemonics.setLocalizedText(jLabel1, org.openide.util.NbBundle.getMessage(NodeJSOptionsPanel.class, "NodeJSOptionsPanel.jLabel1.text")); // NOI18N
 
-        jEditorPane1.setText(org.openide.util.NbBundle.getMessage(NodeJSOptionsPanel.class, "NodeJSOptionsPanel.jEditorPane1.text")); // NOI18N
-        jEditorPane1.setFocusCycleRoot(false);
-        jScrollPane1.setViewportView(jEditorPane1);
+        runCommandjEditorPane1.setText(org.openide.util.NbBundle.getMessage(NodeJSOptionsPanel.class, "NodeJSOptionsPanel.runCommandjEditorPane1.text")); // NOI18N
+        runCommandjEditorPane1.setFocusCycleRoot(false);
+        jScrollPane1.setViewportView(runCommandjEditorPane1);
 
         org.openide.awt.Mnemonics.setLocalizedText(jButton1, org.openide.util.NbBundle.getMessage(NodeJSOptionsPanel.class, "NodeJSOptionsPanel.jButton1.text")); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -57,21 +60,28 @@ final class NodeJSOptionsPanel extends javax.swing.JPanel {
             }
         });
 
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel2, org.openide.util.NbBundle.getMessage(NodeJSOptionsPanel.class, "NodeJSOptionsPanel.jLabel2.text")); // NOI18N
+
+        killCommandjEditorPane2.setText("taskkill /F /IM node.exe"); // NOI18N
+        jScrollPane2.setViewportView(killCommandjEditorPane2);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1)
-                    .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane2)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 492, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jButton1)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton2)))
+                                .addComponent(jButton2))
+                            .addComponent(jLabel2))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -81,24 +91,32 @@ final class NodeJSOptionsPanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addContainerGap(113, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    jEditorPane1.setText(NbPreferences.forModule(NodeJSOptionsPanel.class).get("COMMAND","cd ${workingdir};\nnode ${selectedfile};"));
+    runCommandjEditorPane1.setText(NbPreferences.forModule(NodeJSOptionsPanel.class).get("COMMAND",     "cd ${workingdir};\nnode ${selectedfile};"));
+    runCommandjEditorPane1.setText(NbPreferences.forModule(NodeJSOptionsPanel.class).get("KILL_COMMAND","killall node;"));
     NbPreferences.forModule(NodeJSOptionsPanel.class).put("COMMAND", "cd ${workingdir};\nnode ${selectedfile};");
+    NbPreferences.forModule(NodeJSOptionsPanel.class).put("KILL_COMMAND", "cd ${workingdir};\nnode ${selectedfile};");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
      // reset for windows
-     NbPreferences.forModule(NodeJSOptionsPanel.class).put("COMMAND", "cd ${workingdir} && node ${selectedfile}");
-     jEditorPane1.setText(NbPreferences.forModule(NodeJSOptionsPanel.class).get("COMMAND","cd ${workingdir} && node ${selectedfile}"));
+     NbPreferences.forModule(NodeJSOptionsPanel.class).put("COMMAND",      "cd ${workingdir} && node ${selectedfile}");
+     NbPreferences.forModule(NodeJSOptionsPanel.class).put("KILL_COMMAND", "cd ${workingdir} && node ${selectedfile}");
+     runCommandjEditorPane1.setText(NbPreferences.forModule(NodeJSOptionsPanel.class).get("COMMAND",     "cd ${workingdir} && node ${selectedfile}"));
+     killCommandjEditorPane2.setText(NbPreferences.forModule(NodeJSOptionsPanel.class).get("KILLCOMMAND","taskkill /F /IM node.exe"));
     
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -110,7 +128,8 @@ final class NodeJSOptionsPanel extends javax.swing.JPanel {
         // someCheckBox.setSelected(NbPreferences.forModule(NodeJSOptionsPanel.class).getBoolean("someFlag", false));
         // or:
         // someTextField.setText(SomeSystemOption.getDefault().getSomeStringProperty());
-        jEditorPane1.setText(NbPreferences.forModule(NodeJSOptionsPanel.class).get("COMMAND","cd ${workingdir};\nnode ${selectedfile};"));
+        runCommandjEditorPane1.setText(NbPreferences.forModule(NodeJSOptionsPanel.class).get("COMMAND","cd ${workingdir};\nnode ${selectedfile};"));
+        killCommandjEditorPane2.setText(NbPreferences.forModule(NodeJSOptionsPanel.class).get("KILL_COMMAND","killall node;"));
     }
 
     void store() {
@@ -121,7 +140,8 @@ final class NodeJSOptionsPanel extends javax.swing.JPanel {
         // NbPreferences.forModule(NodeJSOptionsPanel.class).putBoolean("someFlag", someCheckBox.isSelected());
         // or:
         // SomeSystemOption.getDefault().setSomeStringProperty(someTextField.getText());
-        NbPreferences.forModule(NodeJSOptionsPanel.class).put("COMMAND", jEditorPane1.getText());
+        NbPreferences.forModule(NodeJSOptionsPanel.class).put("COMMAND", runCommandjEditorPane1.getText());
+        NbPreferences.forModule(NodeJSOptionsPanel.class).put("KILL_COMMAND", killCommandjEditorPane2.getText());
     }
 
     boolean valid() {
@@ -132,8 +152,11 @@ final class NodeJSOptionsPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JEditorPane jEditorPane1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JEditorPane killCommandjEditorPane2;
+    private javax.swing.JEditorPane runCommandjEditorPane1;
     // End of variables declaration//GEN-END:variables
 }
