@@ -1,35 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE filesystem PUBLIC "-//NetBeans//DTD Filesystem 1.2//EN" "http://www.netbeans.org/dtds/filesystem-1_2.dtd">
 <filesystem>
-    <folder name="Actions">
-        <folder name="Build">
-            <file name="cz-kec-nb-nodejs-RunNode.instance"/>
-        </folder>
-    </folder>
-    <folder name="Editors">
-        <folder name="text">
-            <folder name="javascript">
-                <folder name="Popup">
-                    <file name="cz-kec-nb-nodejs-RunNode.shadow">
-                        <attr name="originalFile" stringvalue="Actions/Build/cz-kec-nb-nodejs-RunNode.instance"/>
-                        <attr name="position" intvalue="400"/>
-                    </file>
-                </folder>
-            </folder>
-        </folder>
-    </folder>
-    <folder name="Loaders">
-        <folder name="text">
-            <folder name="javascript">
-                <folder name="Actions">
-                    <file name="cz-kec-nb-nodejs-RunNode.shadow">
-                        <attr name="originalFile" stringvalue="Actions/Build/cz-kec-nb-nodejs-RunNode.instance"/>
-                        <attr name="position" intvalue="150"/>
-                    </file>
-                </folder>
-            </folder>
-        </folder>
-    </folder>
     <folder name="OptionsDialog">
         <folder name="Advanced">
             <file name="cz-kec-nb-nodejs-NodeJSOptionsAdvancedOption.instance">

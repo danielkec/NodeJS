@@ -19,6 +19,10 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import org.openide.awt.ActionID;
+import org.openide.awt.ActionReference;
+import org.openide.awt.ActionReferences;
+import org.openide.awt.ActionRegistration;
 import org.openide.awt.NotificationDisplayer;
 import org.openide.cookies.EditorCookie;
 import org.openide.filesystems.FileObject;
@@ -36,6 +40,11 @@ import org.openide.windows.OutputWriter;
 /**
  * @author Daniel Kec,Andrew Skiba
  */
+@ActionID(id = "cz.kec.nb.nodejs.RunNode", category = "Build")
+@ActionRegistration(displayName = "#CTL_RunNode", lazy = false)
+@ActionReferences(value = {
+    @ActionReference(path = "Editors/text/javascript/Popup", position = 400),
+    @ActionReference(path = "Loaders/text/javascript/Actions", position = 150)})
 public final class RunNode extends CookieAction {
 
     /**
