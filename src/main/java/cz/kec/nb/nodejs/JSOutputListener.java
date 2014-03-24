@@ -30,19 +30,21 @@ import org.openide.windows.OutputListener;
  * @class cz.kec.nb.nodejs.JSOutputListener
  */
 public class JSOutputListener implements OutputListener{
-private EditorCookie ec;
+private final EditorCookie ec;
     private final FileObject fo;
     private final int line;
     public JSOutputListener(FileObject fo,int line) throws DataObjectNotFoundException {
         this.fo = fo;
-        this.ec = DataObject.find(fo).getCookie(EditorCookie.class);
+        this.ec = DataObject.find(fo).getLookup().lookup(EditorCookie.class);
         this.line = line;
     }
 
+@Override
     public void outputLineSelected(OutputEvent oe) {
 
     }
 
+@Override
     public void outputLineAction(OutputEvent oe) {
                 ec.open();
 		if (EditorRegistry.lastFocusedComponent() != null) {
@@ -52,6 +54,7 @@ private EditorCookie ec;
 		}
     }
 
+@Override
     public void outputLineCleared(OutputEvent oe) {
 
     }

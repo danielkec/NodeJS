@@ -10,6 +10,7 @@
  */
 package cz.kec.nb.nodejs;
 
+import cz.kec.nb.nodejs.ioactions.StopAction;
 import java.awt.Color;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -17,13 +18,13 @@ import java.io.InputStreamReader;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import javax.swing.Action;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import org.openide.awt.ActionID;
 import org.openide.awt.ActionReference;
 import org.openide.awt.ActionReferences;
 import org.openide.awt.ActionRegistration;
-import org.openide.awt.NotificationDisplayer;
 import org.openide.cookies.EditorCookie;
 import org.openide.filesystems.FileObject;
 import org.openide.loaders.DataObject;
@@ -40,7 +41,7 @@ import org.openide.windows.OutputWriter;
 /**
  * @author Daniel Kec,Andrew Skiba
  */
-@ActionID(id = "cz.kec.nb.nodejs.RunNode", category = "Build")
+@ActionID(id = "cz.kec.nb.nodejs.RunNode", category = "NodeJS")
 @ActionRegistration(displayName = "#CTL_RunNode", lazy = false)
 @ActionReferences(value = {
     @ActionReference(path = "Editors/text/javascript/Popup", position = 400),
@@ -52,7 +53,7 @@ public final class RunNode extends CookieAction {
      * @return 
      */
     public static Icon loadIcon(){
-        return new ImageIcon(RunNode.class.getResource("images/win.png"));
+        return new ImageIcon(RunNode.class.getResource("win.png"));
     }
     
     private static final long serialVersionUID = -3853106497059314882L;
@@ -72,34 +73,20 @@ public final class RunNode extends CookieAction {
             fo = dataObject.getPrimaryFile();
             fo.toURL();
             fo.getParent().toURL();
-            final InputOutput io = IOProvider.getDefault().getIO("Node.js " + fo.getName(), false);
+            StopAction sopka = new StopAction();
+            final InputOutput io = IOProvider.getDefault().getIO("Node.js " + fo.getName(),false, new Action[]{sopka}, null);
+            sopka.setIo(io);
             final OutputWriter out = io.getOut();
             OutputWriter erout = io.getErr();
             io.select();
             io.setOutputVisible(true);
             out.reset();
-            String command = NbPreferences.forModule(NodeJSOptionsPanel.class).get("COMMAND", "cd ${workingdir};\nnode ${selectedfile};");
             // multi OS thing
-            String[] cmd;
-            if(System.getProperty("os.name").toLowerCase().contains("windows")){
-                String wdir = WinPath.winfixPath(fo.getParent().toURL().getPath());
-                System.out.println("Working dir "+wdir);
-                command = command.replaceAll("\\$\\{selectedfile\\}", fo.getNameExt());
-                command = command.replaceAll("\\$\\{workingdir\\}", Matcher.quoteReplacement(wdir));
-                if(command.contains(";")){
-                    // win settings bubble
-                    NotificationDisplayer.getDefault().notify("NodeJS",loadIcon(), "Windows with Unix settings detected reseting cmd options. Please run again.", null);
-                    NbPreferences.forModule(NodeJSOptionsPanel.class).put("COMMAND", "cd ${workingdir} && node ${selectedfile}");
-                    return;
-                }
-                cmd = new String[]{"cmd", "/c",command};
-            }else{
-                command = command.replaceAll("\\$\\{selectedfile\\}", fo.getNameExt());
-                command = command.replaceAll("\\$\\{workingdir\\}", fo.getParent().toURL().getPath());
-                cmd = new String[]{"/bin/sh", "-c", command};
-            }
+            String[] cmd = MultiOSCmd.createRunCmd(fo);
+            if(cmd==null)return;
             
-            IOColorLines.println(io, command, Color.lightGray);
+            
+            IOColorLines.println(io, WinPath.concatStringArray(cmd), Color.lightGray);
             final Process proc = Runtime.getRuntime().exec(cmd);
 
             final BufferedReader read = new BufferedReader(new InputStreamReader(proc.getInputStream()));

@@ -21,4 +21,16 @@ public class WinPath {
         fixed = fixed.replaceAll("\\%20"," ");
         return "\""+fixed+"\"";     
     }
+    
+    public static boolean isWindows(){
+        return System.getProperty("os.name").toLowerCase().contains("windows");
+    }
+    
+    public static String concatStringArray(String[] arr){
+        StringBuilder sb = new StringBuilder();
+        for (String tok : arr) {
+            sb.append(tok).append(" ");
+        }
+        return sb.toString();
+    }
 }

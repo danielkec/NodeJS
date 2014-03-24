@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+OpenIDE-Module: cz.kec.nb.nodejs
+OpenIDE-Module-Display-Category: JavaScript
+OpenIDE-Module-Localizing-Bundle: cz/kec/nb/nodejs/Bundle.properties
+OpenIDE-Module-Layer: cz/kec/nb/nodejs/layer.xml
+
